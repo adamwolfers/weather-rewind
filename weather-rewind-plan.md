@@ -11,14 +11,21 @@
 
 ---
 
+## Decisions
+- Use MIT license
+- Monorepo structure
+- Trunk-based workflow (branch strategy)
+
+---
+
 ## Slice 0: Project Setup
 *Time estimate: 2-3 hours*
 
 ### 0.1 Repository Setup
 - [x] Create GitHub repo `weather-rewind`
-- [ ] Initialize with README, .gitignore (Python + Node), MIT license
-- [ ] Decide on structure: monorepo with `/backend` and `/frontend` directories
-- [ ] Create initial branch strategy (main + feature branches)
+- [x] Initialize with README, .gitignore (Python + Node), MIT license
+- [x] Decide on structure: monorepo with `/backend` and `/frontend` directories
+- [x] Create initial branch strategy (main + feature branches)
 
 ### 0.2 Backend Scaffold
 - [ ] Create `/backend` directory
