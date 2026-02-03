@@ -1,11 +1,6 @@
 # Weather Rewind: TDD Project Plan
 
-## Project Vision
-A web app that displays historical weather data for any location and date.
-
 **MVP Scope:** User enters a location and past date → sees weather for that day.
-
----
 
 ## Guiding Principles
 
@@ -16,23 +11,11 @@ A web app that displays historical weather data for any location and date.
 
 ---
 
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Frontend | React 18, TypeScript, Vite, Tailwind CSS |
-| Backend | Python 3.12+, FastAPI, Pydantic |
-| Database | PostgreSQL 16 |
-| Testing | pytest (backend), Vitest + React Testing Library (frontend) |
-| External API | Open-Meteo Historical Weather API |
-
----
-
 ## Slice 0: Project Setup
 *Time estimate: 2-3 hours*
 
 ### 0.1 Repository Setup
-- [ ] Create GitHub repo `weather-rewind`
+- [x] Create GitHub repo `weather-rewind`
 - [ ] Initialize with README, .gitignore (Python + Node), MIT license
 - [ ] Decide on structure: monorepo with `/backend` and `/frontend` directories
 - [ ] Create initial branch strategy (main + feature branches)
