@@ -28,10 +28,10 @@
 - [x] Create initial branch strategy (main + feature branches)
 
 ### 0.2 Backend Scaffold
-- [ ] Create `/backend` directory
-- [ ] Set up Python virtual environment
-- [ ] Create `pyproject.toml` with dependencies: fastapi, uvicorn, pytest, httpx, pydantic
-- [ ] Create directory structure:
+- [x] Create `/backend` directory
+- [x] Set up Python virtual environment
+- [x] Create `pyproject.toml` with dependencies: fastapi, uvicorn, pytest, httpx, pydantic
+- [x] Create directory structure:
     ```
     backend/
     ├── src/
@@ -44,22 +44,22 @@
     │   └── __init__.py
     └── pyproject.toml
     ```
-- [ ] Verify: `pytest` runs (0 tests collected, no errors)
-- [ ] Verify: `uvicorn weather_rewind.main:app --reload` starts (can 404, that's fine)
+- [x] Verify: `pytest` runs (0 tests collected, no errors)
+- [x] Verify: `uvicorn weather_rewind.main:app --reload` starts (can 404, that's fine)
 
 ### 0.3 Frontend Scaffold
-- [ ] Create Vite project: `npm create vite@latest frontend -- --template react-ts`
-- [ ] Install Tailwind CSS and configure
-- [ ] Install Vitest + React Testing Library + jsdom
-- [ ] Create a dummy `App.test.tsx` that passes
-- [ ] Verify: `npm run dev` shows default page
-- [ ] Verify: `npm test` passes
+- [x] Create Vite project: `npm create vite@latest frontend -- --template react-ts`
+- [x] Install Tailwind CSS and configure
+- [x] Install Vitest + React Testing Library + jsdom
+- [x] Create a dummy `App.test.tsx` that passes
+- [x] Verify: `npm run dev` shows default page
+- [x] Verify: `npm test` passes
 
 ### 0.4 Local Database
-- [ ] Install PostgreSQL locally (or use Docker)
-- [ ] Create database: `weather_rewind_dev`
-- [ ] Create test database: `weather_rewind_test`
-- [ ] Verify: can connect via `psql`
+- [x] Install PostgreSQL locally (or use Docker)
+- [x] Create database: `weather_rewind_dev`
+- [x] Create test database: `weather_rewind_test`
+- [x] Verify: can connect via `psql`
 
 **✓ Slice 0 Complete When:** Both apps run locally, tests pass (even if trivial), Postgres accessible.
 
