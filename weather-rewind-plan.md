@@ -71,29 +71,29 @@
 The thinnest possible vertical slice: a backend endpoint that returns fake weather data, connected to a frontend that displays it.
 
 ### 1.1 Backend: Failing Test First
-- [ ] Create `tests/api/test_weather.py`
-- [ ] Write test: `GET /api/weather?lat=47.9&lon=-122.7&date=2024-06-15` returns 200
-- [ ] Write test: response JSON contains expected fields (temperature, conditions, date, location)
-- [ ] Run tests, confirm RED (404 or not implemented)
+- [x] Create `tests/api/test_weather.py`
+- [x] Write test: `GET /api/weather?lat=47.9&lon=-122.7&date=2024-06-15` returns 200
+- [x] Write test: response JSON contains expected fields (temperature, conditions, date, location)
+- [x] Run tests, confirm RED (404 or not implemented)
 
 ### 1.2 Backend: Make It Green
-- [ ] Create `api/routes/weather.py` with router
-- [ ] Define Pydantic response model: `WeatherResponse`
+- [x] Create `api/routes/weather.py` with router
+- [x] Define Pydantic response model: `WeatherResponse`
     - date: str
     - latitude: float
     - longitude: float  
     - temperature_high: float
     - temperature_low: float
     - conditions: str
-- [ ] Implement `GET /api/weather` that returns hardcoded `WeatherResponse`
-- [ ] Register router in `main.py`
-- [ ] Run tests, confirm GREEN
+- [x] Implement `GET /api/weather` that returns hardcoded `WeatherResponse`
+- [x] Register router in `main.py`
+- [x] Run tests, confirm GREEN
 
 ### 1.3 Backend: Refactor
-- [ ] Review code for clarity
-- [ ] Add type hints if missing
-- [ ] Extract constants if needed
-- [ ] Tests still GREEN
+- [x] Review code for clarity
+- [x] Add type hints if missing
+- [x] Extract constants if needed
+- [x] Tests still GREEN
 
 ### 1.4 Frontend: Failing Test First
 - [ ] Create `src/components/WeatherDisplay.test.tsx`
