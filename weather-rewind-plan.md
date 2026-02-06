@@ -96,25 +96,29 @@ The thinnest possible vertical slice: a backend endpoint that returns fake weath
 - [x] Tests still GREEN
 
 ### 1.4 Frontend: Failing Test First
-- [ ] Create `src/components/WeatherDisplay.test.tsx`
-- [ ] Write test: component renders temperature when given weather data
-- [ ] Write test: component renders conditions
-- [ ] Run tests, confirm RED
+- [x] Create `src/components/WeatherDisplay.test.tsx`
+- [x] Write test: component renders temperature when given weather data
+- [x] Write test: component renders conditions
+- [x] Run tests, confirm RED
 
 ### 1.5 Frontend: Make It Green
-- [ ] Define TypeScript interface `WeatherData` matching backend response
-- [ ] Create `WeatherDisplay.tsx` component
-- [ ] Accept `WeatherData` as prop, render temperature and conditions
-- [ ] Style minimally with Tailwind (card with padding, readable text)
-- [ ] Run tests, confirm GREEN
+- [x] Define TypeScript interface `WeatherData` matching backend response
+- [x] Create `WeatherDisplay.tsx` component
+- [x] Accept `WeatherData` as prop, render temperature and conditions
+- [x] Run tests, confirm GREEN
 
-### 1.6 Frontend: Integration
-- [ ] Create `src/api/weather.ts` with `fetchWeather(lat, lon, date)` function
-- [ ] Update `App.tsx` to:
-    - Call `fetchWeather` on mount with hardcoded values
-    - Pass result to `WeatherDisplay`
-- [ ] Configure Vite proxy to forward `/api` to backend
-- [ ] Manual test: start both servers, see hardcoded weather in browser
+### 1.6 Frontend: API Layer (TDD)
+- [x] Create `src/api/weather.ts` with `fetchWeather(lat, lon, date)` function
+- [x] Write test: App fetches and displays weather on mount
+- [x] Run test, confirm RED
+- [x] Update `App.tsx` to call `fetchWeather` on mount, pass result to `WeatherDisplay`
+- [x] Run test, confirm GREEN
+
+### 1.7 Frontend: Integration & Styling
+- [x] Configure Vite proxy to forward `/api` to backend
+- [x] Manual test: start both servers, see hardcoded weather in browser
+- [x] Style `WeatherDisplay` minimally with Tailwind (card with padding, readable text)
+- [x] Refactor if needed, tests still GREEN
 
 **✓ Slice 1 Complete When:** Browser shows hardcoded weather data fetched from your backend.
 
@@ -126,31 +130,39 @@ The thinnest possible vertical slice: a backend endpoint that returns fake weath
 User can enter coordinates and a date; UI updates accordingly.
 
 ### 2.1 Frontend: Date Picker (TDD)
-- [ ] Test: DatePicker calls onChange with selected date
-- [ ] Test: DatePicker disables future dates
+- [ ] Write test: DatePicker calls onChange with selected date
+- [ ] Write test: DatePicker disables future dates
+- [ ] Run tests, confirm RED
 - [ ] Implement `DatePicker.tsx` (native HTML date input is fine for MVP)
-- [ ] Tests GREEN
+- [ ] Run tests, confirm GREEN
+- [ ] Refactor if needed, tests still GREEN
 
 ### 2.2 Frontend: Location Input (TDD)
-- [ ] Test: LocationInput calls onChange with lat/lon values
-- [ ] Test: LocationInput shows validation error for invalid coordinates
+- [ ] Write test: LocationInput calls onChange with lat/lon values
+- [ ] Write test: LocationInput shows validation error for invalid coordinates
+- [ ] Run tests, confirm RED
 - [ ] Implement `LocationInput.tsx` (two number inputs for lat/lon for now)
-- [ ] Tests GREEN
+- [ ] Run tests, confirm GREEN
+- [ ] Refactor if needed, tests still GREEN
 
-### 2.3 Frontend: Wire Up the Form
-- [ ] Test: App fetches new weather when user submits location + date
+### 2.3 Frontend: Wire Up the Form (TDD)
+- [ ] Write test: App fetches new weather when user submits location + date
+- [ ] Run test, confirm RED
 - [ ] Update `App.tsx`:
     - Add state for lat, lon, date
     - Add form with LocationInput, DatePicker, Submit button
     - Fetch weather on submit
-- [ ] Tests GREEN
+- [ ] Run test, confirm GREEN
+- [ ] Refactor if needed, tests still GREEN
 
 ### 2.4 Backend: Validate Query Params (TDD)
-- [ ] Test: invalid latitude (out of range) returns 422
-- [ ] Test: invalid date format returns 422  
-- [ ] Test: future date returns 422
+- [ ] Write test: invalid latitude (out of range) returns 422
+- [ ] Write test: invalid date format returns 422
+- [ ] Write test: future date returns 422
+- [ ] Run tests, confirm RED
 - [ ] Add Pydantic validation to query parameters
-- [ ] Tests GREEN
+- [ ] Run tests, confirm GREEN
+- [ ] Refactor if needed, tests still GREEN
 
 ### 2.5 End-to-End Manual Test
 - [ ] Enter different coordinates and dates
@@ -168,23 +180,32 @@ Replace hardcoded data with real historical weather from Open-Meteo.
 
 ### 3.1 Backend: Weather Service (TDD)
 - [ ] Create `services/weather_service.py`
-- [ ] Test: `fetch_weather(lat, lon, date)` returns WeatherData for valid input
-- [ ] Test: service handles Open-Meteo API error gracefully
+- [ ] Write test: `fetch_weather(lat, lon, date)` returns WeatherData for valid input
+- [ ] Write test: service handles Open-Meteo API error gracefully
+- [ ] Run tests, confirm RED
 - [ ] Implement service using `httpx` to call Open-Meteo
-- [ ] Tests GREEN (use mocking/fixtures for external API)
+- [ ] Run tests, confirm GREEN (use mocking/fixtures for external API)
+- [ ] Refactor if needed, tests still GREEN
 
-### 3.2 Backend: Integrate Service into Endpoint
+### 3.2 Backend: Integrate Service into Endpoint (TDD)
+- [ ] Write/update endpoint tests to mock the service
+- [ ] Run tests, confirm RED (endpoint not using service yet)
 - [ ] Update `/api/weather` to use `weather_service`
-- [ ] Update existing endpoint tests (mock the service)
+- [ ] Run tests, confirm GREEN
 - [ ] Add integration test that hits real Open-Meteo (mark as slow/optional)
-- [ ] Tests GREEN
+- [ ] Refactor if needed, tests still GREEN
 
 ### 3.3 Frontend: Loading and Error States (TDD)
-- [ ] Test: WeatherDisplay shows loading spinner when `isLoading=true`
-- [ ] Test: WeatherDisplay shows error message when `error` prop set
+- [ ] Write test: WeatherDisplay shows loading spinner when `isLoading=true`
+- [ ] Write test: WeatherDisplay shows error message when `error` prop set
+- [ ] Run tests, confirm RED
 - [ ] Implement loading and error states in component
+- [ ] Run tests, confirm GREEN
+- [ ] Write test: App shows loading state during fetch
+- [ ] Run test, confirm RED
 - [ ] Update App to track loading/error state during fetch
-- [ ] Tests GREEN
+- [ ] Run test, confirm GREEN
+- [ ] Refactor if needed, tests still GREEN
 
 ### 3.4 Deploy MVP (First Deploy!)
 - [ ] Create `Dockerfile` for backend
@@ -212,17 +233,21 @@ Cache weather responses to reduce API calls and improve performance.
 
 ### 4.2 Backend: Cache Repository (TDD)
 - [ ] Create `repositories/weather_cache.py`
-- [ ] Test: `get_cached(lat, lon, date)` returns None for cache miss
-- [ ] Test: `get_cached(lat, lon, date)` returns data for cache hit
-- [ ] Test: `save(lat, lon, date, data)` persists correctly
+- [ ] Write test: `get_cached(lat, lon, date)` returns None for cache miss
+- [ ] Write test: `get_cached(lat, lon, date)` returns data for cache hit
+- [ ] Write test: `save(lat, lon, date, data)` persists correctly
+- [ ] Run tests, confirm RED
 - [ ] Implement repository
-- [ ] Tests GREEN (use test database)
+- [ ] Run tests, confirm GREEN (use test database)
+- [ ] Refactor if needed, tests still GREEN
 
-### 4.3 Backend: Integrate Caching into Service
-- [ ] Test: cache hit skips external API call
-- [ ] Test: cache miss calls external API and saves result
+### 4.3 Backend: Integrate Caching into Service (TDD)
+- [ ] Write test: cache hit skips external API call
+- [ ] Write test: cache miss calls external API and saves result
+- [ ] Run tests, confirm RED
 - [ ] Update `weather_service` to check cache first
-- [ ] Tests GREEN
+- [ ] Run tests, confirm GREEN
+- [ ] Refactor if needed, tests still GREEN
 
 ### 4.4 Deploy and Verify
 - [ ] Set up production PostgreSQL (Supabase, Railway, or Neon)
@@ -240,17 +265,21 @@ Cache weather responses to reduce API calls and improve performance.
 Replace lat/lon inputs with city name search.
 
 ### 5.1 Backend: Geocoding Endpoint (TDD)
-- [ ] Test: `GET /api/geocode?q=Seattle` returns lat/lon and display name
-- [ ] Test: no results returns empty array
+- [ ] Write test: `GET /api/geocode?q=Seattle` returns lat/lon and display name
+- [ ] Write test: no results returns empty array
+- [ ] Run tests, confirm RED
 - [ ] Implement using Open-Meteo Geocoding API (free, no key)
-- [ ] Tests GREEN
+- [ ] Run tests, confirm GREEN
+- [ ] Refactor if needed, tests still GREEN
 
 ### 5.2 Frontend: Location Autocomplete (TDD)
-- [ ] Test: typing in location input calls geocode API (debounced)
-- [ ] Test: selecting a result populates lat/lon state
+- [ ] Write test: typing in location input calls geocode API (debounced)
+- [ ] Write test: selecting a result populates lat/lon state
+- [ ] Run tests, confirm RED
 - [ ] Replace coordinate inputs with searchable location input
+- [ ] Run tests, confirm GREEN
 - [ ] Style dropdown results with Tailwind
-- [ ] Tests GREEN
+- [ ] Refactor if needed, tests still GREEN
 
 ### 5.3 End-to-End Flow
 - [ ] Manual test: search "Port Ludlow, WA", select, pick date, see weather
