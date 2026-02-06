@@ -130,12 +130,12 @@ The thinnest possible vertical slice: a backend endpoint that returns fake weath
 User can enter coordinates and a date; UI updates accordingly.
 
 ### 2.1 Frontend: Date Picker (TDD)
-- [ ] Write test: DatePicker calls onChange with selected date
-- [ ] Write test: DatePicker disables future dates
-- [ ] Run tests, confirm RED
-- [ ] Implement `DatePicker.tsx` (native HTML date input is fine for MVP)
-- [ ] Run tests, confirm GREEN
-- [ ] Refactor if needed, tests still GREEN
+- [x] Write test: DatePicker calls onChange with selected date
+- [x] Write test: DatePicker disables future dates
+- [x] Run tests, confirm RED
+- [x] Implement `DatePicker.tsx` (native HTML date input is fine for MVP)
+- [x] Run tests, confirm GREEN
+- [x] Refactor if needed, tests still GREEN
 
 ### 2.2 Frontend: Location Input (TDD)
 - [ ] Write test: LocationInput calls onChange with lat/lon values
