@@ -138,12 +138,12 @@ User can enter coordinates and a date; UI updates accordingly.
 - [x] Refactor if needed, tests still GREEN
 
 ### 2.2 Frontend: Location Input (TDD)
-- [ ] Write test: LocationInput calls onChange with lat/lon values
-- [ ] Write test: LocationInput shows validation error for invalid coordinates
-- [ ] Run tests, confirm RED
-- [ ] Implement `LocationInput.tsx` (two number inputs for lat/lon for now)
-- [ ] Run tests, confirm GREEN
-- [ ] Refactor if needed, tests still GREEN
+- [x] Write test: LocationInput calls onChange with lat/lon values
+- [x] Write test: LocationInput shows validation error for invalid coordinates
+- [x] Run tests, confirm RED
+- [x] Implement `LocationInput.tsx` (two number inputs for lat/lon for now)
+- [x] Run tests, confirm GREEN
+- [x] Refactor if needed, tests still GREEN
 
 ### 2.3 Frontend: Wire Up the Form (TDD)
 - [ ] Write test: App fetches new weather when user submits location + date
