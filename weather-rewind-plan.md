@@ -146,14 +146,14 @@ User can enter coordinates and a date; UI updates accordingly.
 - [x] Refactor if needed, tests still GREEN
 
 ### 2.3 Frontend: Wire Up the Form (TDD)
-- [ ] Write test: App fetches new weather when user submits location + date
-- [ ] Run test, confirm RED
-- [ ] Update `App.tsx`:
+- [x] Write test: App fetches new weather when user submits location + date
+- [x] Run test, confirm RED
+- [x] Update `App.tsx`:
     - Add state for lat, lon, date
     - Add form with LocationInput, DatePicker, Submit button
     - Fetch weather on submit
-- [ ] Run test, confirm GREEN
-- [ ] Refactor if needed, tests still GREEN
+- [x] Run test, confirm GREEN
+- [x] Refactor if needed, tests still GREEN
 
 ### 2.4 Backend: Validate Query Params (TDD)
 - [ ] Write test: invalid latitude (out of range) returns 422
