@@ -156,12 +156,13 @@ User can enter coordinates and a date; UI updates accordingly.
 - [x] Refactor if needed, tests still GREEN
 
 ### 2.4 Backend: Validate Query Params (TDD)
-- [ ] Write test: invalid latitude (out of range) returns 422
-- [ ] Write test: invalid date format returns 422
-- [ ] Write test: future date returns 422
-- [ ] Run tests, confirm RED
-- [ ] Add Pydantic validation to query parameters
-- [ ] Run tests, confirm GREEN
+- [x] Write test: invalid latitude (out of range) returns 422
+- [x] Write test: invalid longitude (out of range) returns 422
+- [x] Write test: invalid date format returns 422
+- [x] Write test: future date returns 422
+- [x] Run tests, confirm RED
+- [x] Add Pydantic validation to query parameters
+- [x] Run tests, confirm GREEN
 - [ ] Refactor if needed, tests still GREEN
 
 ### 2.5 End-to-End Manual Test
