@@ -166,9 +166,9 @@ User can enter coordinates and a date; UI updates accordingly.
 - [ ] Refactor if needed, tests still GREEN
 
 ### 2.5 End-to-End Manual Test
-- [ ] Enter different coordinates and dates
-- [ ] Verify validation errors appear appropriately
-- [ ] Verify weather display updates (still hardcoded data, but flow works)
+- [x] Enter different coordinates and dates
+- [x] Verify validation errors appear appropriately
+- [x] Verify weather display updates (still hardcoded data, but flow works)
 
 **✓ Slice 2 Complete When:** User can input any valid lat/lon + past date, form validates, UI responds.
 
@@ -180,13 +180,13 @@ User can enter coordinates and a date; UI updates accordingly.
 Replace hardcoded data with real historical weather from Open-Meteo.
 
 ### 3.1 Backend: Weather Service (TDD)
-- [ ] Create `services/weather_service.py`
-- [ ] Write test: `fetch_weather(lat, lon, date)` returns WeatherData for valid input
-- [ ] Write test: service handles Open-Meteo API error gracefully
-- [ ] Run tests, confirm RED
-- [ ] Implement service using `httpx` to call Open-Meteo
-- [ ] Run tests, confirm GREEN (use mocking/fixtures for external API)
-- [ ] Refactor if needed, tests still GREEN
+- [x] Create `services/weather_service.py`
+- [x] Write test: `fetch_weather(lat, lon, date)` returns WeatherData for valid input
+- [x] Write test: service handles Open-Meteo API error gracefully
+- [x] Run tests, confirm RED
+- [x] Implement service using `httpx` to call Open-Meteo
+- [x] Run tests, confirm GREEN (use mocking/fixtures for external API)
+- [x] Refactor if needed, tests still GREEN
 
 ### 3.2 Backend: Integrate Service into Endpoint (TDD)
 - [ ] Write/update endpoint tests to mock the service
