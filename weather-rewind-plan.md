@@ -189,10 +189,10 @@ Replace hardcoded data with real historical weather from Open-Meteo.
 - [x] Refactor if needed, tests still GREEN
 
 ### 3.2 Backend: Integrate Service into Endpoint (TDD)
-- [ ] Write/update endpoint tests to mock the service
-- [ ] Run tests, confirm RED (endpoint not using service yet)
-- [ ] Update `/api/weather` to use `weather_service`
-- [ ] Run tests, confirm GREEN
+- [x] Write/update endpoint tests to mock the service
+- [x] Run tests, confirm RED (endpoint not using service yet)
+- [x] Update `/api/weather` to use `weather_service`
+- [x] Run tests, confirm GREEN
 - [ ] Add integration test that hits real Open-Meteo (mark as slow/optional)
 - [ ] Refactor if needed, tests still GREEN
 

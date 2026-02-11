@@ -7,24 +7,24 @@ def test_fetch_weather_returns_weather_data(mock_get):
     mock_get.return_value = Mock(
         status_code=200,
         json=lambda: {
-            "latitude": 47.9,
-            "longitude": -122.7,
+            "latitude": 55.1,
+            "longitude": -153.4,
             "daily": {
-                "time": ["2024-06-15"],
-                "temperature_2m_max": [22.5],
-                "temperature_2m_min": [14.2],
-                "weathercode": [3],
+                "time": ["2023-07-02"],
+                "temperature_2m_max": [28.1],
+                "temperature_2m_min": [15.3],
+                "weathercode": [45],
             }
         },
     )
 
-    result = fetch_weather(47.9, -122.7, "2024-06-15")
-    assert result.date == "2024-06-15"
-    assert result.latitude == 47.9
-    assert result.longitude == -122.7
-    assert result.temperature_high == 22.5
-    assert result.temperature_low == 14.2
-    assert result.conditions == "Overcast"
+    result = fetch_weather(55.1, -153.4, "2023-07-02")
+    assert result.date == "2023-07-02"
+    assert result.latitude == 55.1
+    assert result.longitude == -153.4
+    assert result.temperature_high == 28.1
+    assert result.temperature_low == 15.3
+    assert result.conditions == "Fog"
 
 @patch("weather_rewind.services.weather_service.httpx.get")
 def test_fetch_weather_api_error(mock_get):

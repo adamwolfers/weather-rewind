@@ -1,5 +1,5 @@
 import httpx
-from weather_rewind.api.routes.weather import WeatherResponse
+from weather_rewind.models import WeatherResponse
 
 WEATHER_CODES = {
     0: "Clear sky",

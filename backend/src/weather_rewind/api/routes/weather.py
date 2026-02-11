@@ -1,16 +1,9 @@
 from fastapi import APIRouter, Query, HTTPException
-from pydantic import BaseModel
 from datetime import date as date_type
+from weather_rewind.services.weather_service import fetch_weather
+from weather_rewind.models import WeatherResponse
 
 router = APIRouter()
-
-class WeatherResponse(BaseModel):
-    date: str
-    latitude: float
-    longitude: float
-    temperature_high: float
-    temperature_low: float
-    conditions: str
 
 @router.get("/weather")
 def get_weather(
@@ -26,11 +19,4 @@ def get_weather(
     if parsed_date > date_type.today():
         raise HTTPException(status_code=422, detail="Date cannot be in the future")
 
-    return WeatherResponse(
-        date="2024-06-15",
-        latitude=47.9,
-        longitude=-122.7,
-        temperature_high=72.0,
-        temperature_low=58.0,
-        conditions="Sunny",
-    )
+    return fetch_weather(lat, lon, date)
