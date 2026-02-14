@@ -17,3 +17,9 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests that hit external APIs",
+]
+addopts = "-m 'not slow'"

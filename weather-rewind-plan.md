@@ -193,8 +193,8 @@ Replace hardcoded data with real historical weather from Open-Meteo.
 - [x] Run tests, confirm RED (endpoint not using service yet)
 - [x] Update `/api/weather` to use `weather_service`
 - [x] Run tests, confirm GREEN
-- [ ] Add integration test that hits real Open-Meteo (mark as slow/optional)
-- [ ] Refactor if needed, tests still GREEN
+- [x] Add integration test that hits real Open-Meteo (mark as slow/optional)
+- [x] Refactor if needed, tests still GREEN
 
 ### 3.3 Frontend: Loading and Error States (TDD)
 - [ ] Write test: WeatherDisplay shows loading spinner when `isLoading=true`
