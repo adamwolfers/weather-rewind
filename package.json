@@ -1,0 +1,21 @@
+{
+  "name": "weather-rewind",
+  "version": "1.0.0",
+  "description": "Weather-Rewind is a web app that lets you see what the actual weather was for a specific location on a date in the past.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamwolfers/weather-rewind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/adamwolfers/weather-rewind/issues"
+  },
+  "homepage": "https://github.com/adamwolfers/weather-rewind#readme"
+}
