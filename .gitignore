@@ -1,0 +1,19 @@
+# IDE
+*.swp
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Reference files
+*.ref.js

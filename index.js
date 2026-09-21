@@ -1,13 +1,11 @@
 import { createServer } from "node:http";
 
-const server = createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.write("Weather Rewind");
-  res.write("\n");
-  res.write("Weather Rewind");
-  res.end();
-});
-
-server.listen(3000, () => {
-  console.log("Listening on http://localhost:3000");
+export const server = createServer((request, response) => {
+  response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+  response.write(
+    "<h1>Weather Rewind</h1>" +
+    "<p>Explore weather data from the past, by:</p>" +
+    "<ul><li>Location</li><li>Date</li></ul>"
+  );
+  response.end();
 });
