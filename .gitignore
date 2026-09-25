@@ -16,4 +16,7 @@ node_modules/
 !.env.example
 
 # Reference files
-*.ref.js
+*.ref.*
+
+# Obsidian Notes
+obsidian/
