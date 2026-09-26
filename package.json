@@ -2,20 +2,20 @@
   "name": "weather-rewind",
   "version": "1.0.0",
   "description": "Find weather data from the past.",
-  "main": "index.js",
-  "scripts": {
-    "test": "node --test"
+  "keywords": [],
+  "homepage": "https://github.com/adamwolfers/weather-rewind#readme",
+  "bugs": {
+    "url": "https://github.com/adamwolfers/weather-rewind/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adamwolfers/weather-rewind.git"
   },
-  "keywords": [],
-  "author": "Adam Wolfers",
   "license": "MIT",
+  "author": "Adam Wolfers",
   "type": "module",
-  "bugs": {
-    "url": "https://github.com/adamwolfers/weather-rewind/issues"
-  },
-  "homepage": "https://github.com/adamwolfers/weather-rewind#readme"
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  }
 }
