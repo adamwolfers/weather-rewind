@@ -1,6 +1,6 @@
 import { test, after } from "node:test";
 import assert from "node:assert/strict";
-import { server } from "./app.js";
+import { server } from "./app.ts";
 
 server.listen(0);
 after(() => server.close());
