@@ -14,9 +14,11 @@
   "license": "MIT",
   "author": "Adam Wolfers",
   "type": "module",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "node --test"
+    "check": "npm run typecheck && npm test",
+    "test": "node --test",
+    "typecheck": "tsc"
   },
   "devDependencies": {
     "@types/node": "^24.19.0",
